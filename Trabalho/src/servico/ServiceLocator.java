@@ -6,6 +6,7 @@
 package servico;
 
 import dao.ImplDao;
+import dao.ImplMunicipioDao;
 
 /**
  *
@@ -15,6 +16,10 @@ public class ServiceLocator {
     
     public static ImplDao getEstadoDao() {
       return new ImplDao();
+    }
+    
+    public static ImplMunicipioDao getMunicipioDao() {
+      return new ImplMunicipioDao();
     }
     
 }

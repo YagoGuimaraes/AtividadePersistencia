@@ -6,11 +6,15 @@
 package dominio;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 /**
  *
@@ -22,7 +26,7 @@ public class Estados implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idEstado;
     
     @Column(name="nome", length = 63, nullable = false)
     private String nome;
@@ -38,10 +42,10 @@ public class Estados implements Serializable {
     
     @Column(name="gasto_totais", nullable = false)
     private float gastoTotais;
-
-
     
-    
+      
+
+  
 
     public String getNome() {
         return nome;
@@ -86,17 +90,17 @@ public class Estados implements Serializable {
     
 
     public Long getId() {
-        return id;
+        return idEstado;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idEstado = idEstado;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idEstado != null ? idEstado.hashCode() : 0);
         return hash;
     }
 
@@ -107,7 +111,7 @@ public class Estados implements Serializable {
             return false;
         }
         Estados other = (Estados) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idEstado == null && other.idEstado != null) || (this.idEstado != null && !this.idEstado.equals(other.idEstado))) {
             return false;
         }
         return true;
@@ -115,7 +119,7 @@ public class Estados implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Estados[ id=" + id + " ]";
+        return "dominio.Estados[ id=" + idEstado + " ]";
     }
     
 }

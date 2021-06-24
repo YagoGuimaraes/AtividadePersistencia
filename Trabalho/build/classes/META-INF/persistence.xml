@@ -3,6 +3,7 @@
   <persistence-unit name="TrabalhoPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>dominio.Estados</class>
+    <class>dominio.Municipio</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://207.180.224.202\SQLEXPRESS;databaseName=DWYago"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>

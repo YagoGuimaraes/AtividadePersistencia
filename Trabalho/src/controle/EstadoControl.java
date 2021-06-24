@@ -47,11 +47,11 @@ public class EstadoControl {
 
     public void setEstadoselecionado(Estados estadoselecionado) {
         
-        
-        if (this.estadoselecionado !=null) {
-            setEstadoselecionado(estadoselecionado);
-        }
         this.estadoselecionado=estadoselecionado;
+        if (this.estadoselecionado !=null) {
+            setEstadoDigitado(estadoselecionado);
+        }
+        
         
     }
 

@@ -289,6 +289,11 @@ public class Estado extends javax.swing.JInternalFrame {
         jTableBinding.bind();binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${estadocontrol.estadoselecionado}"), tabelaEstado, org.jdesktop.beansbinding.BeanProperty.create("selectedElement"));
         bindingGroup.addBinding(binding);
 
+        tabelaEstado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelaEstadoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabelaEstado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -372,6 +377,10 @@ public class Estado extends javax.swing.JInternalFrame {
     private void tCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tCodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tCodigoActionPerformed
+
+    private void tabelaEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaEstadoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tabelaEstadoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -51,6 +51,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         mmMunicipo.setMnemonic('m');
         mmMunicipo.setText("Municipio");
+        mmMunicipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mmMunicipoActionPerformed(evt);
+            }
+        });
         mmCadastro.add(mmMunicipo);
 
         mmGasto.setMnemonic('g');
@@ -94,6 +99,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         estado.setVisible(true);
         
     }//GEN-LAST:event_mmEstadoActionPerformed
+
+    private void mmMunicipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmMunicipoActionPerformed
+        Municipio municipio = new Municipio();
+        this.desktopPane.add(municipio);
+        municipio.setVisible(true);
+    }//GEN-LAST:event_mmMunicipoActionPerformed
 
     /**
      * @param args the command line arguments
